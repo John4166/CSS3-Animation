@@ -58,12 +58,12 @@ animation动画，指的是渲染dom之后，就立即执行的动画，动画�
 ````
 
 ### transform的2D\3D变换
-translate(x,y)  --控制元素移动
-rotate(x deg)   --控制元素顺时针旋转给定的角度。内旋转
-rotateX()       --控制元素以X轴为转轴旋转
-rotateY()       --控制元素以Y轴为转轴旋转
-scale(x,y)  --控制元素缩放(宽方法x倍，高放大y倍)
-skew(x,y)    --通过 skew() 方法，元素翻转给定的角度，根据给定的水平线（X 轴）和垂直线（Y 轴）参数
+* translate(x,y)  --控制元素移动
+* rotate(x deg)   --控制元素顺时针旋转给定的角度。内旋转
+* rotateX()       --控制元素以X轴为转轴旋转
+* rotateY()       --控制元素以Y轴为转轴旋转
+* scale(x,y)  --控制元素缩放(宽方法x倍，高放大y倍)
+* skew(x,y)    --通过 skew() 方法，元素翻转给定的角度，根据给定的水平线（X 轴）和垂直线（Y 轴）参数
 ````
  transform: translate(10px,20px) rotate(360deg) scale(1.2,1.2);
 ````
