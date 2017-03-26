@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>2d过渡-transition 2d操作transform</title>
+</head>
+<style>
+    .transition1{
+        width:150px;
+        height: 100px;
+        margin:10px 0;
+        background-color:#00b3ee;
+        -webkit-transition: width 2s ,height 2s;
+        -moz-transition: width 2s ,height 2s;
+        -ms-transition: width 2s,height 2s;
+        -o-transition: width 2s,height 2s;
+        transition: width 2s ,height 2s;
+    }
+    .transition1:hover{
+        width: 250px;
+        height: 150px;
+    }
+    .transition2{
+        margin:10px 0;
+        width:150px;
+        height: 100px;
+        background-color:#00b3ee;
+        transition: width 2s 1s,height 1s 1s ease-in-out,transform 2s ;
+    }
+    .transition2:hover{
+        width: 250px;
+        height: 150px;
+        transform: translate(10px,20px) rotate(360deg) scale(1.2,1.2);
+    }
+    .transition3{
+        margin:10px 0;
+        width:150px;
+        height: 100px;
+        background-color:#00b3ee;
+        transition:transform 2s ;
+    }
+    .transition3:hover{
+        transform: rotateY(360deg);
+    }
+
+    .animation{
+        width: 150px;
+        height: 100px;
+        margin: 10px 0;
+        background-color:#000088 ;
+        animation:myanimation 3s linear infinite;
+    }
+    @keyframes myanimation {
+        0%{
+            background-color: #000088;
+        }
+        50%{
+            transform: translate(100px,0px) rotate(180deg);
+            background-color: #990033;
+        }
+        100%{
+            transform: translate(0px,0px);
+            background-color: #000088;
+       }
+    }
+</style>
+<body>
+<!--这种情况过渡会同时执行-->
+<div class="transition1">2d过渡</div>
+<!--设置延时，过渡可以分开进行,但设置宽高过渡，还是用transform的scale()缩放来做，如果浏览器条件允许-->
+<div class="transition2">2d过渡</div>
+<!--3D转化-->
+<div class="transition3">3d过渡</div>
+<!--动画，默认只会执行一次，infinite就会无限循环-->
+<div class="animation">animation动画</div>
+
+</body>
+</html>
